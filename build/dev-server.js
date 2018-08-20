@@ -1,18 +1,30 @@
 require('./check-versions')()
 
-var config = require('../config')
+var config = require('../config')  // 如果路径是文件夹，那么默认指向config/index.js
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
-var opn = require('opn')
+var opn = require('opn')  // ？
 var path = require('path')
-var express = require('express')
-var webpack = require('webpack')
-var proxyMiddleware = require('http-proxy-middleware')
+var express = require('express')  // 用express搭建本地开发服务器，express类似于Java里面的ssh
+var webpack = require('webpack')   // 引入webpack
+var proxyMiddleware = require('http-proxy-middleware')   // http代理中间件，解析http请求
+
+console.log('dddd' + process.env.NODE_ENV)
+
+// 相当于
+// if(process.env.NODE_ENV === 'testing'){
+//  require('./webpack.prod.conf')
+// }
+// else{
+//  require('./webpack.dev.conf')
+// }
 var webpackConfig = process.env.NODE_ENV === 'testing'
-  ? require('./webpack.prod.conf')
+  ? require('./webpack.prod.conf')   // ? 是判断条件
   : require('./webpack.dev.conf')
+
+
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
