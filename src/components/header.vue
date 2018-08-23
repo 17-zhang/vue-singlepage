@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../assets/scss/_header.scss">
 <template>
   <div class="m-header">
     {{ adminName }}
@@ -9,15 +8,15 @@
   import { store } from '../vuex/store'
 
   export default {
-    name: 'header',
+    name: 'm-header',
     data () {
       return {
-        adminNameName: store.state.adminName
+        adminName: store.state.adminName
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/scss/_header.scss";
+  @import "../assets/scss/header";
 </style>

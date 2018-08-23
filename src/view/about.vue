@@ -33,14 +33,14 @@
 
 <script>
   import { store } from '../vuex/store'
-  import dialog from '../components/dialog'
-  import page from '../components/page'
+  import Dialog from '../components/dialog'
+  import Page from '../components/page'
 
   export default {
     name: 'about',
     components: {
-      dialog,
-      page
+      Dialog,
+      Page
     },
     data () {
       return {

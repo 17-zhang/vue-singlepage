@@ -22,22 +22,22 @@
 <script>
   export default {
     methods: {
-      open() {
+      open () {
         this.$message('这是一条消息提示！')
       },
-      open2() {
+      open2 () {
         this.$message({
           message: '这是一条成功消息！',
           type: 'success'
         })
       },
-      open3() {
+      open3 () {
         this.$message({
           message: '这是一条警告消息！',
           type: 'warning'
         })
       },
-      open4() {
+      open4 () {
         this.$message.error('这是一条错误消息！')
       }
     }

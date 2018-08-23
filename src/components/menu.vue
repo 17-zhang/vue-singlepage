@@ -12,7 +12,7 @@
   import { menuDatas } from '../assets/data/jsondata'
 
   export default {
-    name: 'menu',
+    name: 'm-menu',
     data () {
       return {
         menuList: menuDatas
@@ -23,5 +23,5 @@
 </script>
 
 <style scoped>
-  @import "../assets/scss/_menu.scss";
+  @import "../assets/scss/menu.scss";
 </style>

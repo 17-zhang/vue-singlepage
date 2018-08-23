@@ -70,7 +70,7 @@
     methods: {
       prev () {
         if (this.index > 1) {
-         this.go(this.index - 1)
+          this.go(this.index - 1)
         }
       },
       next () {

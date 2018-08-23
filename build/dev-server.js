@@ -11,8 +11,6 @@ var express = require('express')  // 用express搭建本地开发服务器，exp
 var webpack = require('webpack')   // 引入webpack
 var proxyMiddleware = require('http-proxy-middleware')   // http代理中间件，解析http请求
 
-console.log('dddd' + process.env.NODE_ENV)
-
 // 相当于
 // if(process.env.NODE_ENV === 'testing'){
 //  require('./webpack.prod.conf')
